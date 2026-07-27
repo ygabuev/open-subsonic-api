@@ -7,7 +7,7 @@
             "type": "object",
             "properties": {
                 "collection": {
-                    "$ref": "../../schemas/CollectionWithItems.json"
+                    "$ref": "../../schemas/Collection.json"
                 }
             },
             "required": [
