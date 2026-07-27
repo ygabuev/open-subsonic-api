@@ -28,7 +28,7 @@ Should be used in the [CreateCollection](../endpoints/createcollection) endpoint
     },
     {
       "type": "genre",
-      "name": "vaporwave"
+      "id": "vaporwave"
     }
   ]
 }

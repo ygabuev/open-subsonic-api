@@ -9,9 +9,7 @@ description: >
   An identifier for a collection item to be added.
 ---
 
-Depending on the item type, either `id` or `name` must be provided.
-For most types, `id` is the natural choice, but some types (e.g. [Genre](../responses/genre))
-don't have it, so `name` should be used.
+When the 'id' field is not present for an item type (e.g. [Genre](../responses/genre)), use its name or some other natural identifier.
 
 {{< tabpane persist=false >}}
 {{< tab header="**Example**:" disabled=true />}}
@@ -30,7 +28,7 @@ don't have it, so `name` should be used.
 {{< tab header="Genre" lang="json">}}
 {
   "type": "genre",
-  "name": "vaporwave"
+  "id": "vaporwave"
 }
 {{< /tab >}}
 {{< /tabpane >}}
@@ -38,5 +36,4 @@ don't have it, so `name` should be used.
 | Field |  Type | Req. | OpenS. | Details |
 | --- | --- | --- | --- | --- |
 | `type` | `string` | **Yes** |     | One of: song, album, artist, playlist, genre, internetRadioStation, podcastEpisode, podcast. |
-| `id` | `string` | No |     | ID of the item, where applicable |
-| `name` | `string` | No |     | Name of the item, where applicable |
+| `id` | `string` | **Yes** |     | ID (or name, if 'id' is not available) of an item. |

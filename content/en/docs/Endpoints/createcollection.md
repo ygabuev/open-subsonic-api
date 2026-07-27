@@ -34,7 +34,7 @@ The request payload should be provided in the body as a JSON object, as specifie
     },
     {
       "type": "genre",
-      "name": "vaporwave"
+      "id": "vaporwave"
     }
   ]
 }
