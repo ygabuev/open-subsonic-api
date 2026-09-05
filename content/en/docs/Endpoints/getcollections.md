@@ -19,6 +19,8 @@ Returns collections a user has access to, with optional filters and pagination.
 | --- | --- | --- | --- | --- |
 | `username` | No |  |  | If specified, return collections for this user rather than for the authenticated user. The authenticated user must have admin role if this parameter is used. |
 | `name` | No |  |  | If specified, return collections that have the provided string in their name. |
+| `sort` | No |  | name | If specified, sort the list by the provided field or randomly. Sorting is applied before the `count` and `offset` parameters are taken into account. The default is to sort by name. Allowed values: name, created, random. |
+| `order` | No |  | asc | The order of sorting. Allowed values: asc, desc. |
 | `count` | No |  |  | The number of collections to return. If unset or set to a negative value, return all collections. |
 | `offset` | No |  |  | The number of collections to skip. |
 

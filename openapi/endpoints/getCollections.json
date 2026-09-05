@@ -27,6 +27,33 @@
                 }
             },
             {
+                "name": "sort",
+                "in": "query",
+                "description": "If specified, sort the list by the provided field or randomly. Sorting is applied before the `count` and `offset` parameters are taken into account. The default is to sort by name.",
+                "required": false,
+                "schema": {
+                    "type": "string",
+                    "enum": [
+                        "name",
+                        "created",
+                        "random"
+                    ]
+                }
+            },
+            {
+                "name": "order",
+                "in": "query",
+                "description": "The order of sorting.",
+                "required": false,
+                "schema": {
+                    "type": "string",
+                    "enum": [
+                        "asc",
+                        "desc"
+                    ]
+                }
+            },
+            {
                 "name": "count",
                 "in": "query",
                 "description": "The number of collections to return. If unset or set to a negative value, return all collections.",
