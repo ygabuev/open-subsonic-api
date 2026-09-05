@@ -27,6 +27,43 @@
                 }
             },
             {
+                "name": "sort",
+                "in": "query",
+                "description": "If specified, sort the list by the provided field or randomly. Sorting is applied before the `count` and `offset` parameters are taken into account. Use the `seed` parameter to ensure reproducibility. The default is to sort by name.",
+                "required": false,
+                "schema": {
+                    "type": "string",
+                    "enum": [
+                        "name",
+                        "created",
+                        "random"
+                    ]
+                }
+            },
+            {
+                "name": "order",
+                "in": "query",
+                "description": "The order of sorting.",
+                "required": false,
+                "schema": {
+                    "type": "string",
+                    "enum": [
+                        "asc",
+                        "desc"
+                    ]
+                }
+            },
+            {
+                "name": "seed",
+                "in": "query",
+                "description": "The seed used when sorting randomly.",
+                "required": false,
+                "schema": {
+                    "type": "integer",
+                    "minimum": 0
+                }
+            },
+            {
                 "name": "count",
                 "in": "query",
                 "description": "The number of collections to return. If unset or set to a negative value, return all collections.",
