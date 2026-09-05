@@ -1,7 +1,7 @@
 {
     "get": {
-        "summary": "Get all collections a user has access to.",
-        "description": "Get all collections a user has access to.",
+        "summary": "Get collections a user has access to.",
+        "description": "Get collections a user has access to, with optional filters and pagination.",
         "operationId": "getCollections",
         "tags": [
             "Collections",
@@ -12,6 +12,15 @@
                 "name": "username",
                 "in": "query",
                 "description": "If specified, return collections for this user rather than for the authenticated user. The authenticated user must have admin role if this parameter is used.",
+                "required": false,
+                "schema": {
+                    "type": "string"
+                }
+            },
+            {
+                "name": "name",
+                "in": "query",
+                "description": "If specified, return collections that have the provided string in their name.",
                 "required": false,
                 "schema": {
                     "type": "string"
