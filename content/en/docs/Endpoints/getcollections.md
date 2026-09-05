@@ -6,18 +6,19 @@ OpenSubsonic:
 categories:
 - Collections
 description: >
-  Returns all collections a user has access to.
+  Returns collections a user has access to.
 ---
 
 `http://your-server/rest/getCollections`
 
-Returns all collections a user has access to.
+Returns collections a user has access to, with optional filters and pagination.
 
 ### Parameters
 
 | Parameter | Req. | OpenS. | Default | Comment |
 | --- | --- | --- | --- | --- |
 | `username` | No |  |  | If specified, return collections for this user rather than for the authenticated user. The authenticated user must have admin role if this parameter is used. |
+| `name` | No |  |  | If specified, return collections that have the provided string in their name. |
 | `count` | No |  |  | The number of collections to return. If unset or set to a negative value, return all collections. |
 | `offset` | No |  |  | The number of collections to skip. |
 
