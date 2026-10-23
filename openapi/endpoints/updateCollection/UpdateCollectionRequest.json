@@ -19,11 +19,7 @@
             "type": "boolean"
         },
         "add": {
-            "description": "Add the specified items to the collection. Adding duplicate items, or items that are already present, is disallowed. Items are appended to the tail of the collection.",
-            "type": "array",
-            "items": {
-                "$ref": "../../schemas/CollectionItemId.json"
-            }
+            "$ref": "../../schemas/AddItemsToCollection.json"
         },
         "move":  {
             "$ref": "../../schemas/MoveRange.json"

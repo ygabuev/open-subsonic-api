@@ -24,12 +24,15 @@ Only the fields supplied in the request payload will have an effect on a collect
 {{< tab header="Add" lang="json">}}
 {
   "collectionId": "23785995",
-  "add": [
-    {
-      "type": "album",
-      "id": "1234"
-    }
-  ]
+  "add": {
+    "items": [
+      {
+        "type": "album",
+        "id": "1234"
+      }
+    ],
+    "to": 6
+  }
 }
 {{< /tab >}}
 {{< tab header="Move" lang="json">}}
@@ -56,7 +59,7 @@ Only the fields supplied in the request payload will have an effect on a collect
 | `name` | string | No | **Yes** | The human-readable name of the collection. Cannot be an empty string. |
 | `comment` | string | No | **Yes** | The collection comment. |
 | `public` | boolean | No | **Yes** | `true` if the collection should be visible to all users, `false` otherwise. |
-| `add` | [CollectionItemID[]](../payloads/collectionitemid) | No | **Yes** | Add the specified items to the collection. Adding duplicate items, or items that are already present, is disallowed. Items are appended to the tail of the collection. |
+| `add` | [AddItemsToCollection](../payloads/additemstocollection) | No | **Yes** | Add items to the collection. |
 | `move` | [MoveRange](../payloads/moverange) | No | **Yes** | Move items from the original position to another in the collection. |
 | `remove` | Array of integer | No | **Yes** | Remove the items at the specified positions from the collection. |
 

@@ -29,12 +29,15 @@ The request payload should be provided in the body as a JSON object, as specifie
 {{< tab header="Add" lang="json">}}
 {
   "collectionId": "23785995",
-  "add": [
-    {
-      "type": "album",
-      "id": "1234"
-    }
-  ]
+  "add": {
+    "items": [
+      {
+        "type": "album",
+        "id": "1234"
+      }
+    ],
+    "to": 6
+  }
 }
 {{< /tab >}}
 {{< tab header="Move" lang="json">}}

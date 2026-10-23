@@ -24,8 +24,7 @@
                 "required": false,
                 "schema": {
                     "type": "integer",
-                    "default": -1,
-                    "minimum": 0
+                    "default": -1
                 }
             },
             {

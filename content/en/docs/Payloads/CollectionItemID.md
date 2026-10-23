@@ -1,6 +1,6 @@
 ---
-title: "collectionItemID"
-linkTitle: "collectionItemID [OS]"
+title: "CollectionItemID"
+linkTitle: "CollectionItemID [OS]"
 categories:
 - Collections
 opensubsonic:

@@ -521,6 +521,9 @@
             "UpdateCollectionRequest": {
                 "$ref": "./endpoints/updateCollection/UpdateCollectionRequest.json"
             },
+            "AddItemsToCollection": {
+                "$ref": "./schemas/AddItemsToCollection.json"
+            },
             "MoveRange": {
                 "$ref": "./schemas/MoveRange.json"
             },
